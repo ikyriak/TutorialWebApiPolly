@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "c1208aaf-eeca-4ca8-bb16-1b5ec30a6ed9",
+		"name": "Tutorial: TutorialWebApiPolly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1839360"
+	},
+	"item": [
+		{
+			"name": "Happy Path Scenario: No errors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7083/weatherforecasts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7083",
+					"path": [
+						"weatherforecasts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Timeout-Errors (Provider 2 delay to response)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7083/weatherforecasts/timeout-errors",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7083",
+					"path": [
+						"weatherforecasts",
+						"timeout-errors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Continuous-Failures (Provider 2 is down)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7083/weatherforecasts/continuous-failures",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7083",
+					"path": [
+						"weatherforecasts",
+						"continuous-failures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transient-Faults (Random errors or/and delays on Provider 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7083/weatherforecasts/transient-faults",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7083",
+					"path": [
+						"weatherforecasts",
+						"transient-faults"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
